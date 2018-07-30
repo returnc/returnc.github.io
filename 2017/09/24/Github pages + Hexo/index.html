@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  
+  
+  <title>  Github Pages + Hexo |   1&#39;s blog </title>
+
+ 
+  
+    <link rel="icon" href="/images/favicon.png">
+  
+
+
+  <link rel="stylesheet" href="/nayo.min.css"> 
+</head>  
+  <body>   
+    
+      <header class="header">
+	
+  <nav class="header-nav">        
+   
+    <span class="iconfont icon-menu mobile-toggle"></span>   	
+
+    <div class="header-menu">          
+              
+            
+
+              <a class="header-menu-link" id="header-menu-home" href="/">首页</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-archives" href="/archives">归档</a>     
+
+            
+            
+            
+
+              <a class="header-menu-link" id="header-menu-about" href="/about">关于</a>     
+
+            
+            
+            
+
+              <a class="iconfont icon-menu-search header-menu-link" id="header-menu-search"></a>
+
+            
+                
+    </div>  
+    
+  </nav>
+</header>   
+
+      <div class="container">       
+          
+          
+            <section class="main">  
+          
+
+          <article class="post">
+  
+	<div class="post-header">
+
+	<p class="post-title">	
+		Github pages + Hexo
+	</p>
+			
+
+	<div class="meta-info">	
+	<span>
+		Sep 24, 2017
+	</span>
+
+	
+	
+		<i class="iconfont icon-words"></i>
+		<span>
+			1230
+		</span>
+	
+</div>
+
+</div> 
+	 
+
+	  <div class="post-content slideDownMin">
+
+		
+
+			
+					<p><strong>搭建环境</strong></p>
+<ul>
+<li>Windows 10（64位）</li>
+<li>Git</li>
+<li>node.js</li>
+<li>npm（node.js包含npm） <a id="more"></a>
+<strong>检查是否安装成功</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/images/1506255481702.png" alt="Alt text"></p>
+<p><strong>Github pages</strong></p>
+<p>免费的静态站点，其特点：免费托管、自带主题、支持自制页面等等<br>创建Github pages比较简单，只要注册一个github账号就可以了（<code>注册后添加ssh密钥，这一步不多说了</code>），然后创建一个仓库。但要注意，仓库名的注册是有规则的，必须以以下格式注册。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">username.github.io</span><br></pre></td></tr></table></figure>
+<p><img src="/images/1506258292945.png" alt="Alt text"></p>
+<p><strong>注意：</strong></p>
+<blockquote>
+<p>username是要填你账户的id才可以以username.github.io形式访问，否则就是 username.github.io/repositoryname.github.io<br>如果你不是以username开头的话，还需要到仓库的settings设置</p>
+</blockquote>
+<p><img src="/images/1506257987245.png" alt="Alt text"><br><img src="/images/1506258007889.png" alt="Alt text"></p>
+<p><strong>Hexo</strong><br>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>打开<code>Git Bash</code>开始安装hexo</p>
+<p><strong>全局安装hexo</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>在哪个文件夹初始化hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init filename</span><br></pre></td></tr></table></figure></p>
+<p>进入文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd filename</span><br></pre></td></tr></table></figure></p>
+<p>安装npm<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
+<p>启动服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
+<p>启动后我们会得到一个 <code>http://localhost:4000/</code> 的本地地址用于访问<br><img src="/images/1506259767575.png" alt="Alt text"></p>
+<p>因为我已经搭建好了，所以这张默认主题的图片是网上找的<br><img src="/images/placeholder.png" alt="Alt text" data-src="/images/1506259878456.png" class="lazyload"></p>
+<p><strong>注意：</strong></p>
+<blockquote>
+<p>Windows 10访问4000端口是访问不到的，具体原因我也不清楚，还有一个就是开了类似的ShadowsocksR代理也是访问不到的。<br>更换端口 —&gt; hexo s -p 3600</p>
+</blockquote>
+<p><strong>更换主题</strong><br>去挑一个心仪的主题，然后clone下来，放到站点的<code>themes</code>里面<br>github 插入命令：<code>git clone https://github.com/xxx/xxx.git themes/filename</code><br><img src="/images/placeholder.png" alt="Alt text" data-src="/images/1506260658141.png" class="lazyload"></p>
+<p>然后配置站点的<code>_config.yml</code>，在<code>theme：</code>写上主题的文件夹名<br><img src="/images/placeholder.png" alt="Alt text" data-src="/images/1506260713762.png" class="lazyload"></p>
+<p>修改完成后重新生成静态博客的所有内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></p>
+<p>然后启动服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
+<p><strong>部署到Github pages</strong><br>在部署之前我们需要安装hexo的2个插件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -server --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p>编辑站点的<code>_config.yml</code><br><img src="/images/placeholder.png" alt="Alt text" data-src="/images/1506261731930.png" class="lazyload"></p>
+<p>完成后重新部署<br>先删除原来已经生成的旧文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></p>
+<p>生成静态文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></p>
+<p>启动本地服务预览下有没问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
+<p>没问题之后就部署到github pages上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
+<p>弹出以下输入框请输入：<code>yes</code><br><img src="/images/placeholder.png" alt="Alt text" data-src="/images/1506263232761.png" class="lazyload"></p>
+<p>以后我们每次新发表文章，都要执行以下步骤<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
+  	
+					
+	  </div>     
+	  
+
+	
+<div class="post-meta">
+      
+        <i class="iconfont icon-category"></i>       
+        <a class="category-link" href="/categories/Github/">Github</a> 	
+     
+      	
+
+      	
+</div>
+
+
+
+
+
+<!--
+<div class="post-footer">
+  <div class="pf-left">
+      <img class="pf-avatar" src="/images/header.jpg">
+      <p class="pf-des">心中有佛,怕你禄柒</p>
+  </div>
+
+  <div class="pf-right">           
+      <div class="pf-links">
+         
+        
+      </div>  
+    <nav class="pf-paginator">
+      
+         
+          <a href="/2017/09/26/双击excel只是打开程序，没有打开文件/" data-hover="双击excel只是打开程序，没有打开文件">上一篇</a>      
+            
+        
+            
+  </nav>
+  </div>
+-->
+ 
+	
+	
+</article>
+
+          </section> 
+      </div>            
+    
+    <a id="backTop">
+      <span>
+        <i class="iconfont icon-backtotop"></i>
+      </span>
+    </a> 
+
+  
+    
+    <div class="search-container sildeUpMin">
+        <div class="search-header">
+            <input type="text" placeholder="输入你想搜索的" id="search-input" class="search-input">  
+            <span class="search-cancel iconfont icon-cancel"></span>
+        </div>
+        <div id="search-result" class="search-result"></div>
+    </div>
+ 
+     <div class="mobile-menu">      
+
+      
+      <img class="mobile-menu-icon lazyload" src="/images/placeholder.png" data-src="/images/favicon.png">   
+      
+
+         
+            
+
+            <a class="mobile-menu-link" href="/">首页
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/archives">归档
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/about">关于
+            </a>
+            
+         
+                          
+
+            <a class="mobile-menu-link mobile-menu-search" href="#">搜索 </a>                 
+            
+         
+      
+</div>        
+    
+
+
+
+     
+    
+
+
+
+
+<footer id="footer">	    
+
+		
+		<div class="footer-copyright">
+		&copy;
+				
+		2017-
+		
+		2018		
+	
+		主题作者:Lemon
+		<br>
+
+		Theme By
+		<a href="https://github.com/Lemonreds/hexo-theme-Nayo" target="_blank">Nayo</a>	
+		</div>			
+	 
+</footer>   
+
+  
+
+    <script src="/nayo.bundle.js"></script>           
+  </body>        
+</html>
